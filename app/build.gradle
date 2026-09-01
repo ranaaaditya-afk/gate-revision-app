@@ -18,16 +18,16 @@ android {
 
     buildTypes {
         debug {
-            applicationIdSuffix = ".debug"
+            applicationIdSuffix ".debug"
         }
         release {
-            isMinifyEnabled = false
+            minifyEnabled false
             // Signed with the auto-generated debug keystore so the APK this
             // workflow produces is directly installable on your phone,
             // without you having to create or manage a signing key.
             // This is fine for personal/offline use. It is NOT suitable
             // for publishing to the Play Store.
-            signingConfig = signingConfigs.getByName("debug")
+            signingConfig signingConfigs.debug
         }
     }
 
