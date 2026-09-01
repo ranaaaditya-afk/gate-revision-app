@@ -1,9 +1,9 @@
 package com.gaterevision.app.ui.components
 
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.ExposedDropdownMenu
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.OutlinedTextField
@@ -54,9 +54,10 @@ fun SubjectDropdown(
                 .fillMaxWidth()
                 .menuAnchor()
         )
-        ExposedDropdownMenu(
+        DropdownMenu(
             expanded = expanded,
-            onDismissRequest = { expanded = false }
+            onDismissRequest = { expanded = false },
+            modifier = Modifier.fillMaxWidth()
         ) {
             subjects.forEach { subject ->
                 DropdownMenuItem(
